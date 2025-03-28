@@ -1,16 +1,13 @@
 function firstChar(text) {
-  // your code here
-	 for (let char of text) {
-    // If the character is not a space, return it
-    if (char !== ' ') {
-      return char;
+  if (!text) return ""; // Handle empty or undefined input
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] !== ' ') {
+      return text[i];
     }
   }
-  // If no non-space character is found, return an empty string
-  return '';
+  return "";
 }
 
 // Do not change the code below
-//Uncomment the following line to show the prompt popup
-//const text = prompt("Enter text:");
+const text = prompt("Enter text:"); // Ensure text is properly defined
 alert(firstChar(text));
